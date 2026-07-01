@@ -1,0 +1,29 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: food_link_app
+    working_dir: /var/www
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/var/www
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: food_link_mysql
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_DATABASE: food_link
+      MYSQL_USER: food_link_user
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - food_link_mysql_data:/var/lib/mysql
+
+volumes:
+  food_link_mysql_data:
