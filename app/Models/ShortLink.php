@@ -26,6 +26,11 @@ class ShortLink extends Model
         ];
     }
 
+    public function shortUrl(): string
+    {
+        return url($this->short_code);
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
