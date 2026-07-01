@@ -2196,6 +2196,21 @@ return [
 	'unmatchedLineIgnores' => array (
 ),
 	'collectedDataCallback' => static function (): array { return array (
+  '/var/www/app/Http/Requests/StoreShortLinkRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\StoreShortLinkRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\StoreShortLinkRequest',
+        3 => 
+        array (
+        ),
+      ),
+    ),
+  ),
   '/var/www/app/Models/LinkClick.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
@@ -2256,6 +2271,75 @@ return [
       ),
     ),
   ),
+  '/var/www/app/Policies/ShortLinkPolicy.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Policies\\ShortLinkPolicy',
+        1 => 'viewAny',
+        2 => 'App\\Policies\\ShortLinkPolicy',
+        3 => 
+        array (
+        ),
+      ),
+      1 => 
+      array (
+        0 => 'App\\Policies\\ShortLinkPolicy',
+        1 => 'view',
+        2 => 'App\\Policies\\ShortLinkPolicy',
+        3 => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        0 => 'App\\Policies\\ShortLinkPolicy',
+        1 => 'create',
+        2 => 'App\\Policies\\ShortLinkPolicy',
+        3 => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        0 => 'App\\Policies\\ShortLinkPolicy',
+        1 => 'update',
+        2 => 'App\\Policies\\ShortLinkPolicy',
+        3 => 
+        array (
+        ),
+      ),
+      4 => 
+      array (
+        0 => 'App\\Policies\\ShortLinkPolicy',
+        1 => 'delete',
+        2 => 'App\\Policies\\ShortLinkPolicy',
+        3 => 
+        array (
+        ),
+      ),
+      5 => 
+      array (
+        0 => 'App\\Policies\\ShortLinkPolicy',
+        1 => 'restore',
+        2 => 'App\\Policies\\ShortLinkPolicy',
+        3 => 
+        array (
+        ),
+      ),
+      6 => 
+      array (
+        0 => 'App\\Policies\\ShortLinkPolicy',
+        1 => 'forceDelete',
+        2 => 'App\\Policies\\ShortLinkPolicy',
+        3 => 
+        array (
+        ),
+      ),
+    ),
+  ),
   '/var/www/app/Providers/Filament/AdminPanelProvider.php' => 
   array (
     'PHPStan\\Rules\\Methods\\NamedArgumentParameterMethodCallsCollector' => 
@@ -2265,42 +2349,58 @@ return [
         0 => 'Filament\\Panel',
         1 => 'discoverResources',
         2 => 'in',
-        3 => 33,
+        3 => 34,
       ),
       1 => 
       array (
         0 => 'Filament\\Panel',
         1 => 'discoverResources',
         2 => 'for',
-        3 => 33,
+        3 => 34,
       ),
       2 => 
       array (
         0 => 'Filament\\Panel',
         1 => 'discoverPages',
         2 => 'in',
-        3 => 34,
+        3 => 35,
       ),
       3 => 
       array (
         0 => 'Filament\\Panel',
         1 => 'discoverPages',
         2 => 'for',
-        3 => 34,
+        3 => 35,
       ),
       4 => 
       array (
         0 => 'Filament\\Panel',
         1 => 'discoverWidgets',
         2 => 'in',
-        3 => 38,
+        3 => 39,
       ),
       5 => 
       array (
         0 => 'Filament\\Panel',
         1 => 'discoverWidgets',
         2 => 'for',
-        3 => 38,
+        3 => 39,
+      ),
+    ),
+  ),
+  '/var/www/app/Services/ShortCodeGenerator.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Services\\ShortCodeGenerator',
+        1 => 'generate',
+        2 => 'App\\Services\\ShortCodeGenerator',
+        3 => 
+        array (
+          0 => 'm' . "\0" . 'illuminate\\support\\str' . "\0" . 'random',
+        ),
       ),
     ),
   ),
@@ -2309,6 +2409,13 @@ return [
   '/var/www/app/Http/Controllers/Controller.php' => 
   array (
     'fileHash' => '25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/var/www/app/Http/Requests/StoreShortLinkRequest.php' => 
+  array (
+    'fileHash' => '624f49445450400f552ab21d6de85db3d64dd445f7d02fff86bc98bd56b71336',
     'dependentFiles' => 
     array (
     ),
@@ -2328,6 +2435,7 @@ return [
     array (
       0 => '/var/www/app/Models/LinkClick.php',
       1 => '/var/www/app/Models/User.php',
+      2 => '/var/www/app/Policies/ShortLinkPolicy.php',
     ),
   ),
   '/var/www/app/Models/User.php' => 
@@ -2335,7 +2443,16 @@ return [
     'fileHash' => '8724b51e67f448de7a20bb321dc4b5ffa8acaee68cd139532e6cd85491dd5a1b',
     'dependentFiles' => 
     array (
-      0 => '/var/www/app/Models/ShortLink.php',
+      0 => '/var/www/app/Http/Requests/StoreShortLinkRequest.php',
+      1 => '/var/www/app/Models/ShortLink.php',
+      2 => '/var/www/app/Policies/ShortLinkPolicy.php',
+    ),
+  ),
+  '/var/www/app/Policies/ShortLinkPolicy.php' => 
+  array (
+    'fileHash' => 'c476f8017524d25306b07f3da0a69c1cd2d9de57abccdd87fa801907daca9840',
+    'dependentFiles' => 
+    array (
     ),
   ),
   '/var/www/app/Providers/AppServiceProvider.php' => 
@@ -2347,7 +2464,35 @@ return [
   ),
   '/var/www/app/Providers/Filament/AdminPanelProvider.php' => 
   array (
-    'fileHash' => '44a0c11556ffc21aa0f8a2a7877a159a7604c4756c24b3b7c7e28a4d3e7c29f6',
+    'fileHash' => '8ba545083a365fca336069f2c5965e158013a1d4cb75b9eddd0a282227772d19',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/var/www/app/Services/ClickTrackingService.php' => 
+  array (
+    'fileHash' => '136c0138c9a2016ebcf536f438096a25cfd358bc85a7f24aac469b899ef0a99d',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/var/www/app/Services/RedirectService.php' => 
+  array (
+    'fileHash' => '2b07ffc07bf3af4a69d9eaea0d45a8681ccec49947b5cbabc7e56aa3f71e4e3a',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/var/www/app/Services/ShortCodeGenerator.php' => 
+  array (
+    'fileHash' => 'eefced1585f45e376c3d1ce077022227d2edef47887907c3bf3a2f344110c3a1',
+    'dependentFiles' => 
+    array (
+    ),
+  ),
+  '/var/www/app/Services/ShortLinkService.php' => 
+  array (
+    'fileHash' => '017618a9d8ead5c0bba1cea0380651c60bc2bf9c572524fd75b4848450c3ce1d',
     'dependentFiles' => 
     array (
     ),
@@ -2384,6 +2529,28 @@ return [
   array (
     0 => 'laravel/framework',
   ),
+  '/var/www/app/Policies/ShortLinkPolicy.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  '/var/www/app/Http/Requests/StoreShortLinkRequest.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  '/var/www/app/Services/ClickTrackingService.php' => 
+  array (
+  ),
+  '/var/www/app/Services/RedirectService.php' => 
+  array (
+  ),
+  '/var/www/app/Services/ShortCodeGenerator.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  '/var/www/app/Services/ShortLinkService.php' => 
+  array (
+  ),
 ),
 	'exportedNodesCallback' => static function (): array { return array (
   '/var/www/app/Http/Controllers/Controller.php' => 
@@ -2406,6 +2573,81 @@ return [
       ),
        'statements' => 
       array (
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Http/Requests/StoreShortLinkRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\StoreShortLinkRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => 
+          \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+             'phpDocString' => '/**
+     * @return array<string, list<string>>
+     */',
+             'namespace' => 'App\\Http\\Requests',
+             'uses' => 
+            array (
+              'formrequest' => 'Illuminate\\Foundation\\Http\\FormRequest',
+            ),
+             'constUses' => 
+            array (
+            ),
+          )),
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
       ),
        'attributes' => 
       array (
@@ -2776,6 +3018,314 @@ return [
       ),
     )),
   ),
+  '/var/www/app/Policies/ShortLinkPolicy.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Policies\\ShortLinkPolicy',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'viewAny',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'view',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'shortLink',
+               'type' => 'App\\Models\\ShortLink',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'create',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'update',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'shortLink',
+               'type' => 'App\\Models\\ShortLink',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'delete',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'shortLink',
+               'type' => 'App\\Models\\ShortLink',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'restore',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'shortLink',
+               'type' => 'App\\Models\\ShortLink',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        6 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'forceDelete',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'user',
+               'type' => 'App\\Models\\User',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'shortLink',
+               'type' => 'App\\Models\\ShortLink',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   '/var/www/app/Providers/AppServiceProvider.php' => 
   array (
     0 => 
@@ -2914,6 +3464,159 @@ return [
            'attributes' => 
           array (
           ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Services/ClickTrackingService.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Services\\ClickTrackingService',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Services/RedirectService.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Services\\RedirectService',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Services/ShortCodeGenerator.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Services\\ShortCodeGenerator',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'generate',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'string',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'length',
+               'type' => 'int',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => true,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  '/var/www/app/Services/ShortLinkService.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Services\\ShortLinkService',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedClassConstantsNode::__set_state(array(
+           'constants' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedClassConstantNode::__set_state(array(
+               'name' => 'MAX_GENERATION_ATTEMPTS',
+               'value' => '5',
+               'attributes' => 
+              array (
+              ),
+            )),
+          ),
+           'public' => true,
+           'private' => false,
+           'final' => false,
+           'phpDoc' => NULL,
         )),
       ),
        'attributes' => 

@@ -53,7 +53,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Providers/Filament/AdminPanelProvider.php' => 
     array (
-      0 => '44a0c11556ffc21aa0f8a2a7877a159a7604c4756c24b3b7c7e28a4d3e7c29f6',
+      0 => '8ba545083a365fca336069f2c5965e158013a1d4cb75b9eddd0a282227772d19',
       1 => 
       array (
         0 => 'app\\providers\\filament\\adminpanelprovider',
@@ -94,6 +94,100 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         0 => 'app\\models\\casts',
         1 => 'app\\models\\user',
         2 => 'app\\models\\clicks',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Policies/ShortLinkPolicy.php' => 
+    array (
+      0 => 'c476f8017524d25306b07f3da0a69c1cd2d9de57abccdd87fa801907daca9840',
+      1 => 
+      array (
+        0 => 'app\\policies\\shortlinkpolicy',
+      ),
+      2 => 
+      array (
+        0 => 'app\\policies\\viewany',
+        1 => 'app\\policies\\view',
+        2 => 'app\\policies\\create',
+        3 => 'app\\policies\\update',
+        4 => 'app\\policies\\delete',
+        5 => 'app\\policies\\restore',
+        6 => 'app\\policies\\forcedelete',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Http/Requests/StoreShortLinkRequest.php' => 
+    array (
+      0 => '624f49445450400f552ab21d6de85db3d64dd445f7d02fff86bc98bd56b71336',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\storeshortlinkrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\authorize',
+        1 => 'app\\http\\requests\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Services/ClickTrackingService.php' => 
+    array (
+      0 => '136c0138c9a2016ebcf536f438096a25cfd358bc85a7f24aac469b899ef0a99d',
+      1 => 
+      array (
+        0 => 'app\\services\\clicktrackingservice',
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Services/RedirectService.php' => 
+    array (
+      0 => '2b07ffc07bf3af4a69d9eaea0d45a8681ccec49947b5cbabc7e56aa3f71e4e3a',
+      1 => 
+      array (
+        0 => 'app\\services\\redirectservice',
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Services/ShortCodeGenerator.php' => 
+    array (
+      0 => 'eefced1585f45e376c3d1ce077022227d2edef47887907c3bf3a2f344110c3a1',
+      1 => 
+      array (
+        0 => 'app\\services\\shortcodegenerator',
+      ),
+      2 => 
+      array (
+        0 => 'app\\services\\generate',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Services/ShortLinkService.php' => 
+    array (
+      0 => '017618a9d8ead5c0bba1cea0380651c60bc2bf9c572524fd75b4848450c3ce1d',
+      1 => 
+      array (
+        0 => 'app\\services\\shortlinkservice',
+      ),
+      2 => 
+      array (
       ),
       3 => 
       array (

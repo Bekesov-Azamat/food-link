@@ -1,8 +1,8 @@
 <?php declare(strict_types = 1);
 
-// odsl-/var/www/app/Providers/Filament/AdminPanelProvider.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Providers\Filament\AdminPanelProvider
+// odsl-/var/www/app/Services/ShortCodeGenerator.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Services\ShortCodeGenerator
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.31-8ba545083a365fca336069f2c5965e158013a1d4cb75b9eddd0a282227772d19',
+   'variableKey' => 'v2-6.70.0.1-8.2.31-eefced1585f45e376c3d1ce077022227d2edef47887907c3bf3a2f344110c3a1',
    'data' => 
   array (
     'locatedSource' => 
@@ -10,13 +10,13 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       'class' => 'PHPStan\\BetterReflection\\SourceLocator\\Located\\LocatedSource',
       'data' => 
       array (
-        'name' => 'App\\Providers\\Filament\\AdminPanelProvider',
-        'filename' => '/var/www/app/Providers/Filament/AdminPanelProvider.php',
+        'name' => 'App\\Services\\ShortCodeGenerator',
+        'filename' => '/var/www/app/Services/ShortCodeGenerator.php',
       ),
     ),
-    'namespace' => 'App\\Providers\\Filament',
-    'name' => 'App\\Providers\\Filament\\AdminPanelProvider',
-    'shortName' => 'AdminPanelProvider',
+    'namespace' => 'App\\Services',
+    'name' => 'App\\Services\\ShortCodeGenerator',
+    'shortName' => 'ShortCodeGenerator',
     'isInterface' => false,
     'isTrait' => false,
     'isEnum' => false,
@@ -26,11 +26,11 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 21,
-    'endLine' => 59,
+    'startLine' => 7,
+    'endLine' => 13,
     'startColumn' => 1,
     'endColumn' => 1,
-    'parentClassName' => 'Filament\\PanelProvider',
+    'parentClassName' => NULL,
     'implementsClassNames' => 
     array (
     ),
@@ -45,22 +45,34 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateMethods' => 
     array (
-      'panel' => 
+      'generate' => 
       array (
-        'name' => 'panel',
+        'name' => 'generate',
         'parameters' => 
         array (
-          'panel' => 
+          'length' => 
           array (
-            'name' => 'panel',
-            'default' => NULL,
+            'name' => 'length',
+            'default' => 
+            array (
+              'code' => '6',
+              'attributes' => 
+              array (
+                'startLine' => 9,
+                'endLine' => 9,
+                'startTokenPos' => 30,
+                'startFilePos' => 131,
+                'endTokenPos' => 30,
+                'endFilePos' => 131,
+              ),
+            ),
             'type' => 
             array (
               'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
               'data' => 
               array (
-                'name' => 'Filament\\Panel',
-                'isIdentifier' => false,
+                'name' => 'int',
+                'isIdentifier' => true,
               ),
             ),
             'isVariadic' => false,
@@ -69,12 +81,12 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'attributes' => 
             array (
             ),
-            'startLine' => 23,
-            'endLine' => 23,
-            'startColumn' => 27,
-            'endColumn' => 38,
+            'startLine' => 9,
+            'endLine' => 9,
+            'startColumn' => 30,
+            'endColumn' => 44,
             'parameterIndex' => 0,
-            'isOptional' => false,
+            'isOptional' => true,
           ),
         ),
         'returnsReference' => false,
@@ -83,16 +95,16 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
           'data' => 
           array (
-            'name' => 'Filament\\Panel',
-            'isIdentifier' => false,
+            'name' => 'string',
+            'isIdentifier' => true,
           ),
         ),
         'attributes' => 
         array (
         ),
         'docComment' => NULL,
-        'startLine' => 23,
-        'endLine' => 58,
+        'startLine' => 9,
+        'endLine' => 12,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -100,10 +112,10 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'isGenerator' => false,
         'isVariadic' => false,
         'modifiers' => 1,
-        'namespace' => 'App\\Providers\\Filament',
-        'declaringClassName' => 'App\\Providers\\Filament\\AdminPanelProvider',
-        'implementingClassName' => 'App\\Providers\\Filament\\AdminPanelProvider',
-        'currentClassName' => 'App\\Providers\\Filament\\AdminPanelProvider',
+        'namespace' => 'App\\Services',
+        'declaringClassName' => 'App\\Services\\ShortCodeGenerator',
+        'implementingClassName' => 'App\\Services\\ShortCodeGenerator',
+        'currentClassName' => 'App\\Services\\ShortCodeGenerator',
         'aliasName' => NULL,
       ),
     ),
