@@ -1,8 +1,8 @@
 <?php declare(strict_types = 1);
 
-// odsl-/var/www/app/Models/User.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\User
+// odsl-/var/www/app/Models/ShortLink.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\ShortLink
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.31-8724b51e67f448de7a20bb321dc4b5ffa8acaee68cd139532e6cd85491dd5a1b',
+   'variableKey' => 'v2-6.70.0.1-8.2.31-11608735c7f0f35ed86b395575ef6d7b9849723c58ccb3341963a7c90a864373',
    'data' => 
   array (
     'locatedSource' => 
@@ -10,13 +10,13 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       'class' => 'PHPStan\\BetterReflection\\SourceLocator\\Located\\LocatedSource',
       'data' => 
       array (
-        'name' => 'App\\Models\\User',
-        'filename' => '/var/www/app/Models/User.php',
+        'name' => 'App\\Models\\ShortLink',
+        'filename' => '/var/www/app/Models/ShortLink.php',
       ),
     ),
     'namespace' => 'App\\Models',
-    'name' => 'App\\Models\\User',
-    'shortName' => 'User',
+    'name' => 'App\\Models\\ShortLink',
+    'shortName' => 'ShortLink',
     'isInterface' => false,
     'isTrait' => false,
     'isEnum' => false,
@@ -26,18 +26,17 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'attributes' => 
     array (
     ),
-    'startLine' => 12,
-    'endLine' => 55,
+    'startLine' => 10,
+    'endLine' => 38,
     'startColumn' => 1,
     'endColumn' => 1,
-    'parentClassName' => 'Illuminate\\Foundation\\Auth\\User',
+    'parentClassName' => 'Illuminate\\Database\\Eloquent\\Model',
     'implementsClassNames' => 
     array (
     ),
     'traitClassNames' => 
     array (
-      0 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
-      1 => 'Illuminate\\Notifications\\Notifiable',
+      0 => 'Illuminate\\Database\\Eloquent\\SoftDeletes',
     ),
     'immediateConstants' => 
     array (
@@ -46,73 +45,30 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     array (
       'fillable' => 
       array (
-        'declaringClassName' => 'App\\Models\\User',
-        'implementingClassName' => 'App\\Models\\User',
+        'declaringClassName' => 'App\\Models\\ShortLink',
+        'implementingClassName' => 'App\\Models\\ShortLink',
         'name' => 'fillable',
         'modifiers' => 2,
         'type' => NULL,
         'default' => 
         array (
-          'code' => '[\'name\', \'email\', \'password\']',
+          'code' => '[\'user_id\', \'original_url\', \'short_code\', \'clicks_count\']',
           'attributes' => 
           array (
-            'startLine' => 27,
-            'endLine' => 31,
-            'startTokenPos' => 93,
-            'startFilePos' => 657,
-            'endTokenPos' => 104,
-            'endFilePos' => 716,
+            'startLine' => 14,
+            'endLine' => 19,
+            'startTokenPos' => 48,
+            'startFilePos' => 303,
+            'endTokenPos' => 62,
+            'endFilePos' => 398,
           ),
         ),
-        'docComment' => '/**
- * The attributes that are mass assignable.
- *
- * @var list<string>
- */',
+        'docComment' => NULL,
         'attributes' => 
         array (
         ),
-        'startLine' => 27,
-        'endLine' => 31,
-        'startColumn' => 5,
-        'endColumn' => 6,
-        'isPromoted' => false,
-        'declaredAtCompileTime' => true,
-        'immediateVirtual' => false,
-        'immediateHooks' => 
-        array (
-        ),
-      ),
-      'hidden' => 
-      array (
-        'declaringClassName' => 'App\\Models\\User',
-        'implementingClassName' => 'App\\Models\\User',
-        'name' => 'hidden',
-        'modifiers' => 2,
-        'type' => NULL,
-        'default' => 
-        array (
-          'code' => '[\'password\', \'remember_token\']',
-          'attributes' => 
-          array (
-            'startLine' => 38,
-            'endLine' => 41,
-            'startTokenPos' => 115,
-            'startFilePos' => 855,
-            'endTokenPos' => 123,
-            'endFilePos' => 907,
-          ),
-        ),
-        'docComment' => '/**
- * The attributes that should be hidden for serialization.
- *
- * @var list<string>
- */',
-        'attributes' => 
-        array (
-        ),
-        'startLine' => 38,
-        'endLine' => 41,
+        'startLine' => 14,
+        'endLine' => 19,
         'startColumn' => 5,
         'endColumn' => 6,
         'isPromoted' => false,
@@ -125,41 +81,6 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     'immediateMethods' => 
     array (
-      'shortLinks' => 
-      array (
-        'name' => 'shortLinks',
-        'parameters' => 
-        array (
-        ),
-        'returnsReference' => false,
-        'returnType' => 
-        array (
-          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
-          'data' => 
-          array (
-            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
-            'isIdentifier' => false,
-          ),
-        ),
-        'attributes' => 
-        array (
-        ),
-        'docComment' => NULL,
-        'startLine' => 17,
-        'endLine' => 20,
-        'startColumn' => 5,
-        'endColumn' => 5,
-        'couldThrow' => false,
-        'isClosure' => false,
-        'isGenerator' => false,
-        'isVariadic' => false,
-        'modifiers' => 1,
-        'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\User',
-        'implementingClassName' => 'App\\Models\\User',
-        'currentClassName' => 'App\\Models\\User',
-        'aliasName' => NULL,
-      ),
       'casts' => 
       array (
         'name' => 'casts',
@@ -179,13 +100,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'attributes' => 
         array (
         ),
-        'docComment' => '/**
- * Get the attributes that should be cast.
- *
- * @return array<string, string>
- */',
-        'startLine' => 48,
-        'endLine' => 54,
+        'docComment' => NULL,
+        'startLine' => 21,
+        'endLine' => 27,
         'startColumn' => 5,
         'endColumn' => 5,
         'couldThrow' => false,
@@ -194,9 +111,79 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         'isVariadic' => false,
         'modifiers' => 2,
         'namespace' => 'App\\Models',
-        'declaringClassName' => 'App\\Models\\User',
-        'implementingClassName' => 'App\\Models\\User',
-        'currentClassName' => 'App\\Models\\User',
+        'declaringClassName' => 'App\\Models\\ShortLink',
+        'implementingClassName' => 'App\\Models\\ShortLink',
+        'currentClassName' => 'App\\Models\\ShortLink',
+        'aliasName' => NULL,
+      ),
+      'user' => 
+      array (
+        'name' => 'user',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\BelongsTo',
+            'isIdentifier' => false,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 29,
+        'endLine' => 32,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\ShortLink',
+        'implementingClassName' => 'App\\Models\\ShortLink',
+        'currentClassName' => 'App\\Models\\ShortLink',
+        'aliasName' => NULL,
+      ),
+      'clicks' => 
+      array (
+        'name' => 'clicks',
+        'parameters' => 
+        array (
+        ),
+        'returnsReference' => false,
+        'returnType' => 
+        array (
+          'class' => 'PHPStan\\BetterReflection\\Reflection\\ReflectionNamedType',
+          'data' => 
+          array (
+            'name' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
+            'isIdentifier' => false,
+          ),
+        ),
+        'attributes' => 
+        array (
+        ),
+        'docComment' => NULL,
+        'startLine' => 34,
+        'endLine' => 37,
+        'startColumn' => 5,
+        'endColumn' => 5,
+        'couldThrow' => false,
+        'isClosure' => false,
+        'isGenerator' => false,
+        'isVariadic' => false,
+        'modifiers' => 1,
+        'namespace' => 'App\\Models',
+        'declaringClassName' => 'App\\Models\\ShortLink',
+        'implementingClassName' => 'App\\Models\\ShortLink',
+        'currentClassName' => 'App\\Models\\ShortLink',
         'aliasName' => NULL,
       ),
     ),

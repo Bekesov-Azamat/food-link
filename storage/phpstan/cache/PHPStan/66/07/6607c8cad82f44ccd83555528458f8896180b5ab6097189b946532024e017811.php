@@ -14,6 +14,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
           'userfactory' => 'Database\\Factories\\UserFactory',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+          'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
           'authenticatable' => 'Illuminate\\Foundation\\Auth\\User',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
         ),
@@ -588,6 +589,33 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
           4 => NULL,
         ),
       )),
+      '6dd4fa8ce09efb29983b25ebfdff28f3' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'App\\Models',
+         'uses' => 
+        array (
+          'userfactory' => 'Database\\Factories\\UserFactory',
+          'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+          'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
+          'authenticatable' => 'Illuminate\\Foundation\\Auth\\User',
+          'notifiable' => 'Illuminate\\Notifications\\Notifiable',
+        ),
+         'className' => 'App\\Models\\User',
+         'functionName' => 'shortLinks',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
       '78e6ca04372166a6ab2f6ac1d081a7cd' => 
       \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
          'namespace' => 'App\\Models',
@@ -595,6 +623,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
         array (
           'userfactory' => 'Database\\Factories\\UserFactory',
           'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+          'hasmany' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
           'authenticatable' => 'Illuminate\\Foundation\\Auth\\User',
           'notifiable' => 'Illuminate\\Notifications\\Notifiable',
         ),
@@ -617,7 +646,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      '/var/www/app/Models/User.php' => '41d800ffd4887c75e66af8eaedc756edce052eb662baae357308c6e364a6c9d2',
+      '/var/www/app/Models/User.php' => '8724b51e67f448de7a20bb321dc4b5ffa8acaee68cd139532e6cd85491dd5a1b',
       '/var/www/vendor/composer/../laravel/framework/src/Illuminate/Database/Eloquent/Factories/HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
       '/var/www/vendor/composer/../laravel/framework/src/Illuminate/Notifications/Notifiable.php' => '573fa9bb96fa392434450c9cd9deb8d4e40a5bb93c140a648267b48dfa0433ac',
       '/var/www/vendor/composer/../laravel/framework/src/Illuminate/Notifications/HasDatabaseNotifications.php' => 'a7a163aa1f98a0ae4cd2135905b6852e29a850beb4296aa72c44c37d22832135',

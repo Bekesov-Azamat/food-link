@@ -21,14 +21,15 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     '/var/www/app/Models/User.php' => 
     array (
-      0 => '41d800ffd4887c75e66af8eaedc756edce052eb662baae357308c6e364a6c9d2',
+      0 => '8724b51e67f448de7a20bb321dc4b5ffa8acaee68cd139532e6cd85491dd5a1b',
       1 => 
       array (
         0 => 'app\\models\\user',
       ),
       2 => 
       array (
-        0 => 'app\\models\\casts',
+        0 => 'app\\models\\shortlinks',
+        1 => 'app\\models\\casts',
       ),
       3 => 
       array (
@@ -60,6 +61,39 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       2 => 
       array (
         0 => 'app\\providers\\filament\\panel',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Models/LinkClick.php' => 
+    array (
+      0 => '6c1f15d2791af1fb8b7abb790bcae25103094e9b5626b89b86fe525f35ca836f',
+      1 => 
+      array (
+        0 => 'app\\models\\linkclick',
+      ),
+      2 => 
+      array (
+        0 => 'app\\models\\casts',
+        1 => 'app\\models\\shortlink',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    '/var/www/app/Models/ShortLink.php' => 
+    array (
+      0 => '11608735c7f0f35ed86b395575ef6d7b9849723c58ccb3341963a7c90a864373',
+      1 => 
+      array (
+        0 => 'app\\models\\shortlink',
+      ),
+      2 => 
+      array (
+        0 => 'app\\models\\casts',
+        1 => 'app\\models\\user',
+        2 => 'app\\models\\clicks',
       ),
       3 => 
       array (
