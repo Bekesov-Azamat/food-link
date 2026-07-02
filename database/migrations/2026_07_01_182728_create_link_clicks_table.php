@@ -27,7 +27,7 @@ return new class extends Migration
                 ->nullable();
 
             $table->timestamps();
-            $table->index('created_ad');
+            $table->index('created_at');
         });
     }
 

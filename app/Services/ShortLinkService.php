@@ -23,6 +23,7 @@ class ShortLinkService
                     'user_id' => $user->id,
                     'original_url' => $originalUrl,
                     'short_code' => $this->shortCodeGenerator->generate(),
+                    'clicks_count' => 0,
                 ]);
             } catch (UniqueConstraintViolationException) {
                 continue;
