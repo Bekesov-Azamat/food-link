@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ShortLinkResource\Pages;
+use App\Filament\Resources\ShortLinkResource\RelationManagers\ClicksRelationManager;
 use App\Models\ShortLink;
 use App\Models\User;
 use Filament\Forms;
@@ -79,6 +80,17 @@ class ShortLinkResource extends Resource
             ->defaultSort('created_at', 'desc')
             ->filters([])
             ->actions([
+                Tables\Actions\Action::make('copy_short_url')
+                    ->label('Copy')
+                    ->icon('heroicon-o-document-duplicate')
+                    ->color('gray')
+                    ->action(fn (): null => null)
+                    ->extraAttributes(fn (ShortLink $record): array => [
+                        'data-copy-url' => $record->shortUrl(),
+                        'x-on:click' => 'navigator.clipboard.writeText($el.dataset.copyUrl)',
+                    ]),
+
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
@@ -99,14 +111,14 @@ class ShortLinkResource extends Resource
 
     public static function getRelations(): array
     {
-        return [];
+        return [ClicksRelationManager::class];
     }
 
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListShortLinks::route('/'),
-            'create' => Pages\CreateShortLink::route('/create'),
+            'view' => Pages\ViewShortLink::route('/{record}'),
             'edit' => Pages\EditShortLink::route('/{record}/edit'),
         ];
     }
