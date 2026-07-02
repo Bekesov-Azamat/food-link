@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/cabinet');
 });
 
 Route::get('/{shortCode}', RedirectController::class)

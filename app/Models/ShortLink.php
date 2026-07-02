@@ -31,11 +31,17 @@ class ShortLink extends Model
         return url($this->short_code);
     }
 
+    /**
+     * @return BelongsTo<User, $this>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * @return HasMany<LinkClick, $this>
+     */
     public function clicks(): HasMany
     {
         return $this->hasMany(LinkClick::class);

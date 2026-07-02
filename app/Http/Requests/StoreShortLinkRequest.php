@@ -17,11 +17,20 @@ class StoreShortLinkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'original_url' => [
-                'required',
-                'url:http,https',
-                'max:2048',
-            ],
+            'original_url' => self::originalUrlRules(),
+        ];
+    }
+
+    /**
+     * @return list<string>
+     */
+    public static function originalUrlRules(): array
+    {
+        return [
+            'required',
+            'string',
+            'url:http,https',
+            'max:2048',
         ];
     }
 }

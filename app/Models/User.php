@@ -14,6 +14,9 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
+    /**
+     * @return HasMany<ShortLink, $this>
+     */
     public function shortLinks(): HasMany
     {
         return $this->hasMany(ShortLink::class);

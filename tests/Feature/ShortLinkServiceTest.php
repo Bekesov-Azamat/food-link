@@ -84,4 +84,16 @@ class ShortLinkServiceTest extends TestCase
             'short_code' => 'def456',
         ]);
     }
+
+    public function test_it_rejects_non_http_urls(): void
+    {
+        $user = User::factory()->create();
+
+        $this->expectException(\InvalidArgumentException::class);
+
+        app(ShortLinkService::class)->createForUser(
+            $user,
+            'javascript:alert(1)',
+        );
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ShortLinkResource\Pages;
 use App\Filament\Resources\ShortLinkResource\RelationManagers\ClicksRelationManager;
+use App\Http\Requests\StoreShortLinkRequest;
 use App\Models\ShortLink;
 use App\Models\User;
 use Filament\Forms;
@@ -31,10 +32,10 @@ class ShortLinkResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('original_url')
                     ->label('Original URL')
-                    ->url()
-                    ->required()
-                    ->maxLength(2048)
+                    ->rules(StoreShortLinkRequest::originalUrlRules())
+                    ->dehydrateStateUsing(fn (string $state): string => trim($state))
                     ->placeholder('https://example.com/page')
+                    ->helperText('Only http and https URLs are allowed.')
                     ->columnSpanFull(),
 
                 Forms\Components\TextInput::make('short_code')
@@ -97,6 +98,9 @@ class ShortLinkResource extends Resource
             ->bulkActions([]);
     }
 
+    /**
+     * @return Builder<ShortLink>
+     */
     public static function getEloquentQuery(): Builder
     {
         /** @var User $user */

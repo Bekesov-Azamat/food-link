@@ -22,6 +22,9 @@ class LinkClick extends Model
         ];
     }
 
+    /**
+     * @return BelongsTo<ShortLink, $this>
+     */
     public function shortLink(): BelongsTo
     {
         return $this->belongsTo(ShortLink::class);
